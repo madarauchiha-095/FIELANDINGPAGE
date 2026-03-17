@@ -93,52 +93,43 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
-    color: white;
+    background-color: white;
+    color: #333;
     padding: 8rem 1rem 4rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
-}
-
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-    animation: moveBackground 20s linear infinite;
-}
-
-@keyframes moveBackground {
-    from { transform: translateX(0); }
-    to { transform: translateX(100px); }
+    text-align: center;
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 600px;
-    animation: slideInLeft 1s ease-out 0.5s both;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    animation: slideInUp 1s ease-out 0.5s both;
 }
 
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     animation: fadeInUp 1s ease-out 1s both;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: #666;
     animation: fadeInUp 1s ease-out 1.2s both;
 }
 
@@ -183,10 +174,9 @@ nav ul li a:hover {
 }
 
 .hero-image {
-    flex: 1;
     text-align: center;
     position: relative;
-    animation: slideInRight 1s ease-out 0.5s both;
+    animation: slideInUp 1s ease-out 0.5s both;
 }
 
 @keyframes slideInRight {
@@ -195,8 +185,9 @@ nav ul li a:hover {
 }
 
 .hero-image i {
-    font-size: 10rem;
-    opacity: 0.8;
+    font-size: 8rem;
+    color: #ff6b35;
+    margin-bottom: 1rem;
     animation: float 3s ease-in-out infinite;
 }
 
@@ -206,16 +197,13 @@ nav ul li a:hover {
 }
 
 .mock-screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+    display: inline-block;
+    background: linear-gradient(135deg, #fff 0%, #fefefe 100%);
     color: #333;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 200px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+    border: 2px solid #ff6b35;
     animation: bounceIn 1s ease-out 1.5s both;
 }
 
